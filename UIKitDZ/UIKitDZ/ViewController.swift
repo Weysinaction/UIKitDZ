@@ -8,13 +8,15 @@
 
 import UIKit
 
-let buttonSum = UIButton(type: .system)
-let buttonChoose = UIButton(type: .system)
-var labelName = UILabel()
-
 class ViewController: UIViewController {
 
+    let buttonSum = UIButton(type: .system)
+    let buttonChoose = UIButton(type: .system)
+    var labelName = UILabel()
+    
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
         let buttonSumX = 65
         let buttonSumY = 350
         let buttonWidth = 100
@@ -46,9 +48,6 @@ class ViewController: UIViewController {
         buttonSum.frame = CGRect(x: buttonSumX, y: buttonSumY, width: buttonWidth, height: buttonHeight)
         buttonChoose.frame = CGRect(x: buttonChooseX, y: buttonChooseY, width: buttonWidth, height: buttonHeight)
         
-        super.viewDidLoad()
-        
-        
         self.view.addSubview(buttonSum)
         self.view.addSubview(buttonChoose)
         self.view.addSubview(labelName)
@@ -58,8 +57,8 @@ class ViewController: UIViewController {
         let alertController = UIAlertController(title: "ФИО", message: "Введите ФИО", preferredStyle: .alert)
         let action = UIAlertAction(title: "Готово", style: .cancel) { (action) in
             
-            labelName.text = alertController.textFields?.first?.text
-            
+            self.labelName.text = alertController.textFields?.first?.text
+
         }
         alertController.addTextField(configurationHandler: nil)
         alertController.addAction(action)
