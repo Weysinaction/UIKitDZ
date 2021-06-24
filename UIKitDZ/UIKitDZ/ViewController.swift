@@ -10,11 +10,28 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let picker = UIDatePicker()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        picker.center = view.center
+        
+        picker.datePickerMode = .countDownTimer
+        
+        self.view.addSubview(picker)
+        
+        picker.countDownDuration = 2 * 60
+        
+        picker.addTarget(self, action: #selector(datePickerChange(paramDatePicker: )), for: .valueChanged)
+        
     }
 
-
+    @objc func datePickerChange(paramDatePicker: UIDatePicker) {
+        if paramDatePicker.isEqual(self.picker) {
+            print("dateChange : = ", paramDatePicker.date)
+            
+        }
+    }
 }
 
