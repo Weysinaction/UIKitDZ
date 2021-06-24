@@ -55,8 +55,8 @@ class RootController: UIViewController {
             performSegue(withIdentifier: "SegueFromRootToFirst", sender: self)
         } else {
             let alertController = UIAlertController(title: "Внимание!", message: "Неверные логин/пароль", preferredStyle: .alert)
-            let actionYes = UIAlertAction(title: "Ok", style: .default) { [weak self](actionYes) in
-                self?.performSegue(withIdentifier: "SegueFromFirstToCheck", sender: self)
+            let actionYes = UIAlertAction(title: "Ok", style: .default) {(actionYes) in
+        
             }
             
             alertController.addAction(actionYes)
