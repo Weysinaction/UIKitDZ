@@ -25,13 +25,24 @@ class SongViewController: UIViewController {
         super.viewDidLoad()
         
 //        do {
-//            if let audioPath = Bundle.main.path(forResource: "camry_3_5", ofType: "mp3") {
-//            try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath))
+//            if let audioPath = Bundle.main.path(forResource: "nirvana", ofType: "mp3") {
+//                player = try AVPlayer(url: URL(fileURLWithPath: audioPath))
+//                print("audioPath = \(audioPath)")
 //            }
 //        } catch {
-//            print("Error")
+//            print("Error", error.localizedDescription)
 //        }
+        
+        do {
+            if let audioPath = Bundle.main.path(forResource: "nirvana", ofType: "mp3") {
+            try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath))
+            }
+        } catch {
+            print("Error")
+        }
+        
         self.player.play()
+        //endSongLabel.text = String(self.player.duration)
         
     }
     
@@ -40,4 +51,16 @@ class SongViewController: UIViewController {
         var songAuthor: String
     }
 
+    @IBAction func buttonDismiss(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    @IBAction func buttonPlayPauseTapped(_ sender: Any) {
+//        if player.play() {
+//            imageView.image = UIImage(systemName: "person-fill")
+//            player.stop()
+//        } else {
+//            player.play()
+//        }
+        print("buttonPlayPressed")
+    }
 }

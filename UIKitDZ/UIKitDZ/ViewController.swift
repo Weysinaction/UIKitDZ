@@ -7,12 +7,26 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
+    
+    var player = AVAudioPlayer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        DispatchQueue.main.async {
+            do {
+                if let audioPath = Bundle.main.path(forResource: "nirvana", ofType: "mp3") {
+                    try self.player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath))
+                }
+            } catch {
+                print("Error")
+            }
+            
+            self.player.play()
+        }
         
         
     }
@@ -30,12 +44,6 @@ class ViewController: UIViewController {
         let story = UIStoryboard(name: "Main", bundle: nil)
         let controller = story.instantiateViewController(identifier: "SongViewController") as! SongViewController
         self.present(controller, animated: true, completion: nil)
-        
-        
-        
-        let songViewController = SongViewController()
-        //songViewController.songInfo = SongViewController.SongInfo(songName: songName, songAuthor: songAuthor)
-        
-        self.present(songViewController, animated: true, completion: nil)
+    
     }
 }

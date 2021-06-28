@@ -16,7 +16,7 @@
 		E016731D26867E5700671585 /* backward-track.png in Resources */ = {isa = PBXBuildFile; fileRef = E016731926867E5700671585 /* backward-track.png */; };
 		E016731E26867E5700671585 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = E016731A26867E5700671585 /* play.png */; };
 		E016731F26867E5700671585 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = E016731B26867E5700671585 /* pause.png */; };
-		E016732426892D1600671585 /* camry_3_5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E016732326892D1600671585 /* camry_3_5.mp3 */; };
+		E04C1CA32689CB400086C610 /* nirvana.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E04C1CA22689CB400086C610 /* nirvana.mp3 */; };
 		E0B8F7312681CBBC000237D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B8F7302681CBBC000237D3 /* AppDelegate.swift */; };
 		E0B8F7332681CBBC000237D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B8F7322681CBBC000237D3 /* SceneDelegate.swift */; };
 		E0B8F7352681CBBC000237D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B8F7342681CBBC000237D3 /* ViewController.swift */; };
@@ -35,7 +35,7 @@
 		E016731926867E5700671585 /* backward-track.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backward-track.png"; sourceTree = "<group>"; };
 		E016731A26867E5700671585 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		E016731B26867E5700671585 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
-		E016732326892D1600671585 /* camry_3_5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = camry_3_5.mp3; sourceTree = "<group>"; };
+		E04C1CA22689CB400086C610 /* nirvana.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nirvana.mp3; sourceTree = "<group>"; };
 		E0B8F72D2681CBBC000237D3 /* UIKitDZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitDZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0B8F7302681CBBC000237D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0B8F7322681CBBC000237D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 				E016731126866D2D00671585 /* SongViewController.swift */,
 				E0B8F7362681CBBC000237D3 /* Main.storyboard */,
 				E0B8F7392681CBBE000237D3 /* Assets.xcassets */,
-				E016732326892D1600671585 /* camry_3_5.mp3 */,
+				E04C1CA22689CB400086C610 /* nirvana.mp3 */,
 				E016732026892C9500671585 /* music */,
 				E016731726867E2A00671585 /* images */,
 				E0B8F73B2681CBBE000237D3 /* LaunchScreen.storyboard */,
@@ -171,6 +171,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E04C1CA32689CB400086C610 /* nirvana.mp3 in Resources */,
 				E016731026866B8100671585 /* iu-2.jpeg in Resources */,
 				E016731E26867E5700671585 /* play.png in Resources */,
 				E016731D26867E5700671585 /* backward-track.png in Resources */,
@@ -180,7 +181,6 @@
 				E016731626866F1100671585 /* iu-4.jpeg in Resources */,
 				E016730E26866ACA00671585 /* iu.jpeg in Resources */,
 				E0B8F73A2681CBBE000237D3 /* Assets.xcassets in Resources */,
-				E016732426892D1600671585 /* camry_3_5.mp3 in Resources */,
 				E0B8F7382681CBBC000237D3 /* Main.storyboard in Resources */,
 				E016731526866F1100671585 /* iu-3.jpeg in Resources */,
 			);
