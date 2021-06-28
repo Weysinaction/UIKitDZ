@@ -23,6 +23,7 @@
 		E0B8F7382681CBBC000237D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B8F7362681CBBC000237D3 /* Main.storyboard */; };
 		E0B8F73A2681CBBE000237D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0B8F7392681CBBE000237D3 /* Assets.xcassets */; };
 		E0B8F73D2681CBBE000237D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B8F73B2681CBBE000237D3 /* LaunchScreen.storyboard */; };
+		E0FD86D4268A588500EB3CFA /* camry_3_5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E0FD86D3268A588500EB3CFA /* camry_3_5.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		E0B8F7392681CBBE000237D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0B8F73C2681CBBE000237D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0B8F73E2681CBBE000237D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0FD86D3268A588500EB3CFA /* camry_3_5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = camry_3_5.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				E016731126866D2D00671585 /* SongViewController.swift */,
 				E0B8F7362681CBBC000237D3 /* Main.storyboard */,
 				E0B8F7392681CBBE000237D3 /* Assets.xcassets */,
+				E0FD86D3268A588500EB3CFA /* camry_3_5.mp3 */,
 				E04C1CA22689CB400086C610 /* nirvana.mp3 */,
 				E016732026892C9500671585 /* music */,
 				E016731726867E2A00671585 /* images */,
@@ -176,6 +179,7 @@
 				E016731E26867E5700671585 /* play.png in Resources */,
 				E016731D26867E5700671585 /* backward-track.png in Resources */,
 				E0B8F73D2681CBBE000237D3 /* LaunchScreen.storyboard in Resources */,
+				E0FD86D4268A588500EB3CFA /* camry_3_5.mp3 in Resources */,
 				E016731F26867E5700671585 /* pause.png in Resources */,
 				E016731C26867E5700671585 /* next.png in Resources */,
 				E016731626866F1100671585 /* iu-4.jpeg in Resources */,

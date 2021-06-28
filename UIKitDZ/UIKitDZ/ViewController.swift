@@ -12,21 +12,13 @@ import AVFoundation
 class ViewController: UIViewController {
     
     var player = AVAudioPlayer()
-
+    var songsArray: [(songName: String, songAuthor: String, songFile: String)] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        DispatchQueue.main.async {
-            do {
-                if let audioPath = Bundle.main.path(forResource: "nirvana", ofType: "mp3") {
-                    try self.player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath))
-                }
-            } catch {
-                print("Error")
-            }
-            
-            self.player.play()
-        }
+        songsArray = [(songName: "Camry 3.5", songAuthor: "UncleFlexxx", songFile: "camry_3_5"),
+                      (songName: "Smells like teen spirit", songAuthor: "Nirvana", songFile: "nirvana")]
         
         
     }
@@ -34,16 +26,18 @@ class ViewController: UIViewController {
     
    
     @IBAction func firstSongTapped(_ sender: Any) {
-        presentSongView(songName: "Camry 3.5", songAuthor: "UncleFlexxx")
+        presentSongView(songArray: songsArray, songID: 0)
     }
     @IBAction func secondSongTapped(_ sender: Any) {
-        presentSongView(songName: "Camry 3.5", songAuthor: "UncleFlexxx")
+        presentSongView(songArray: songsArray, songID: 1)
     }
     
-    func presentSongView(songName: String, songAuthor: String) {
+    func presentSongView(songArray: [(songName: String, songAuthor: String, songFile: String)], songID: Int) {
         let story = UIStoryboard(name: "Main", bundle: nil)
         let controller = story.instantiateViewController(identifier: "SongViewController") as! SongViewController
+        controller.songArray = songsArray
+        controller.songID = songID
         self.present(controller, animated: true, completion: nil)
-    
     }
+    
 }
