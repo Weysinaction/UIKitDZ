@@ -8,81 +8,81 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIActivityItemSource {
+class ViewController: UIViewController {
     
-    @IBOutlet var pickerView: UIPickerView!
-    @IBOutlet var label: UILabel!
+    //MARK: IBOutlet
+    @IBOutlet var loginTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!
+    
+    //MARK: Public properties
+    static var userArray: [(login: String, password: String)] = []
+    
+    //MARK: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //self.storyboard!.instantiateViewController(withIdentifier: "ViewController") as! ViewController
         
-        pickerViewChange()
     }
-
-
-    @IBAction func buttonShareTapped(_ sender: Any) {
-        let vc = UIActivityViewController(activityItems: [label.text ?? "nil"], applicationActivities: nil)
-        //vc.excludedActivityTypes = [UIActivity.ActivityType.message]
-        self.present(vc, animated: true, completion: nil)
-        
+    //MARK: Public methods
+    func checkUser(login: String, password: String) -> Bool {
+        var isUser = false
+        for user in ViewController.userArray {
+            if login == user.login && password == user.password {
+                isUser = true
+            } else {
+                isUser = false
+            }
+        }
+        return isUser
     }
     
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if row == 2 {
-            let activityViewController = UIActivityViewController(activityItems: [self.label.text ?? "nil"], applicationActivities: nil)
-            self.present(activityViewController, animated: true, completion: nil)
+    //MARK: IBAction
+    @IBAction func logInTapped(_ sender: Any) {
+        if checkUser(login: loginTextField.text ?? "", password: passwordTextField.text ?? "") {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let viewController = storyboard.instantiateViewController(withIdentifier: "NavigationViewController") as! NavigationViewController
+            self.navigationController?.pushViewController(viewController, animated: true)
         }
     }
     
-    //Activity items
-    func activityViewControllerPlaceholderItem(_ activityViewController: UIActivityViewController) -> Any {
-        NSLog("Place Holder")
-        return label.text ?? ""
-    }
     
-    func activityViewController(_ activityViewController: UIActivityViewController, itemForActivityType activityType: UIActivity.ActivityType?) -> Any? {
-        NSLog("Place holder itemForActivity")
-        
-        if(activityType == UIActivity.ActivityType.postToFacebook) {
-            return label.text ?? ""
-        } else {
-            return label.text ?? ""
-        }
-    }
-    
-    func pickerViewChange() {
-        self.pickerView.dataSource = self
-        self.pickerView.delegate = self
-    }
-}
-
-extension ViewController: UIPickerViewDataSource {
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 5
+    @IBAction func signInTapped(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
     
     
 }
 
-extension ViewController: UIPickerViewDelegate {
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        switch row {
-        case 0:
-            return "First"
-        case 1:
-            return "Second"
-        case 2:
-            return "Third"
-        case 3:
-            return "Fourth"
-        case 4:
-            return "Fifth"
-        default:
-            return ""
-        }
-    }
-}
+//extension ViewController: UIPickerViewDataSource {
+//    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+//        return 1
+//    }
+//
+//    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+//        return 5
+//    }
+//
+//
+//}
+//
+//extension ViewController: UIPickerViewDelegate {
+//    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+//        switch row {
+//        case 0:
+//            return "First"
+//        case 1:
+//            return "Second"
+//        case 2:
+//            return "Third"
+//        case 3:
+//            return "Fourth"
+//        case 4:
+//            return "Fifth"
+//        default:
+//            return ""
+//        }
+//    }
+//}
