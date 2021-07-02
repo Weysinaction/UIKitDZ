@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E04D2A40268E957200F47BFA /* AuthentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04D2A3F268E957100F47BFA /* AuthentViewController.swift */; };
-		E04D2A44268E95D400F47BFA /* PizzaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04D2A43268E95D400F47BFA /* PizzaViewController.swift */; };
-		E04D2A46268E95F400F47BFA /* IngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04D2A45268E95F400F47BFA /* IngredientsViewController.swift */; };
-		E04D2A48268E960100F47BFA /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04D2A47268E960100F47BFA /* PaymentViewController.swift */; };
 		E0B8F7312681CBBC000237D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B8F7302681CBBC000237D3 /* AppDelegate.swift */; };
 		E0B8F7332681CBBC000237D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B8F7322681CBBC000237D3 /* SceneDelegate.swift */; };
 		E0B8F7352681CBBC000237D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B8F7342681CBBC000237D3 /* ViewController.swift */; };
@@ -20,10 +16,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E04D2A3F268E957100F47BFA /* AuthentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthentViewController.swift; sourceTree = "<group>"; };
-		E04D2A43268E95D400F47BFA /* PizzaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaViewController.swift; sourceTree = "<group>"; };
-		E04D2A45268E95F400F47BFA /* IngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsViewController.swift; sourceTree = "<group>"; };
-		E04D2A47268E960100F47BFA /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		E0B8F72D2681CBBC000237D3 /* UIKitDZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitDZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0B8F7302681CBBC000237D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0B8F7322681CBBC000237D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,10 +59,6 @@
 				E0B8F7302681CBBC000237D3 /* AppDelegate.swift */,
 				E0B8F7322681CBBC000237D3 /* SceneDelegate.swift */,
 				E0B8F7342681CBBC000237D3 /* ViewController.swift */,
-				E04D2A3F268E957100F47BFA /* AuthentViewController.swift */,
-				E04D2A43268E95D400F47BFA /* PizzaViewController.swift */,
-				E04D2A45268E95F400F47BFA /* IngredientsViewController.swift */,
-				E04D2A47268E960100F47BFA /* PaymentViewController.swift */,
 				E0B8F7362681CBBC000237D3 /* Main.storyboard */,
 				E0B8F7392681CBBE000237D3 /* Assets.xcassets */,
 				E0B8F73B2681CBBE000237D3 /* LaunchScreen.storyboard */,
@@ -150,12 +138,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E04D2A48268E960100F47BFA /* PaymentViewController.swift in Sources */,
-				E04D2A44268E95D400F47BFA /* PizzaViewController.swift in Sources */,
 				E0B8F7352681CBBC000237D3 /* ViewController.swift in Sources */,
 				E0B8F7312681CBBC000237D3 /* AppDelegate.swift in Sources */,
-				E04D2A46268E95F400F47BFA /* IngredientsViewController.swift in Sources */,
-				E04D2A40268E957200F47BFA /* AuthentViewController.swift in Sources */,
 				E0B8F7332681CBBC000237D3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
