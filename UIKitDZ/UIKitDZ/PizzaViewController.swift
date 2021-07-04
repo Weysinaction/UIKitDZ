@@ -18,6 +18,7 @@ final class PizzaViewController: UIViewController {
     private let buttonPlusOne = UIButton()
     private let buttonPlusTwo = UIButton()
     
+    //MARK: ViewController's methods
     override func viewDidLoad() {
         super.viewDidLoad()
 

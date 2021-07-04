@@ -28,6 +28,7 @@ final class IngredientsViewController: UIViewController {
     var pizzaImage = UIImage()
     var ingredientsArray: [String] = []
     
+    //MARK: ViewController's methods
     override func viewDidLoad() {
         super.viewDidLoad()
 

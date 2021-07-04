@@ -22,7 +22,7 @@ final class PaymentViewController: UIViewController {
     //MARK: public properties
     var ingredientsArray: [String] = []
 
-    
+    //MARK: ViewController's methods
     override func viewDidLoad() {
         super.viewDidLoad()
 

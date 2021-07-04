@@ -15,6 +15,7 @@ final class FoodViewController: UIViewController {
     private let imageViewSushi = UIImageView()
     private var tapGesture = UITapGestureRecognizer()
     
+    //MARK: ViewController's methods
     override func viewDidLoad() {
         super.viewDidLoad()
 

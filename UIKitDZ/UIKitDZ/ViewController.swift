@@ -19,10 +19,9 @@ final class ViewController: UIViewController, UITextFieldDelegate {
     private let imageView = UIImageView()
     private let dividerOne = UIView()
     private let dividerTwo = UIView()
-    
-    
     var navController = UINavigationController()
     
+    //MARK: ViewController's methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
