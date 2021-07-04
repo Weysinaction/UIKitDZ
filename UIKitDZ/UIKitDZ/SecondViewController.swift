@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+final class SecondViewController: UIViewController {
 
     //MARK: IBOutlets
     @IBOutlet var buttonConfigure: UIButton!
@@ -22,7 +22,7 @@ class SecondViewController: UIViewController {
     
     //MARK: Methods
     //Make button rounded
-    func configureButton() {
+    private func configureButton() {
         buttonConfigure.layer.cornerRadius = 15
     }
 

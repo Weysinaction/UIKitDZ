@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FourthViewController: UIViewController {
+final class FourthViewController: UIViewController {
     
     //MARK: IBOutlet
     @IBOutlet var pickerView: UIPickerView!
@@ -74,9 +74,9 @@ extension FourthViewController: UIPickerViewDelegate {
         case 0:
             returnString = String(row) + " ч"
         case 1:
-            returnString = String(row) + " ч"
+            returnString = String(row) + " м"
         case 2:
-            returnString = String(row) + " ч"
+            returnString = String(row) + " с"
         default:
             returnString = ""
         }
