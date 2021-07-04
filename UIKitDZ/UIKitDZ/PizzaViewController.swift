@@ -8,15 +8,15 @@
 
 import UIKit
 
-class PizzaViewController: UIViewController {
+final class PizzaViewController: UIViewController {
 
-    //MARK: public properties
-    let imageViewPepperoni = UIImageView()
-    let imageViewMargarita = UIImageView()
-    let labelPepperoni = UILabel()
-    let labelMargarita = UILabel()
-    let buttonPlusOne = UIButton()
-    let buttonPlusTwo = UIButton()
+    //MARK: private properties
+    private let imageViewPepperoni = UIImageView()
+    private let imageViewMargarita = UIImageView()
+    private let labelPepperoni = UILabel()
+    private let labelMargarita = UILabel()
+    private let buttonPlusOne = UIButton()
+    private let buttonPlusTwo = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -8,17 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+final class ViewController: UIViewController, UITextFieldDelegate {
     
-    //MARK: public properties
-    let button = UIButton()
-    let labelLogin = UILabel()
-    let labelPassword = UILabel()
-    let loginTextField = UITextField()
-    let passwordTextField = UITextField()
-    let imageView = UIImageView()
-    let dividerOne = UIView()
-    let dividerTwo = UIView()
+    //MARK: private properties
+    private let button = UIButton()
+    private let labelLogin = UILabel()
+    private let labelPassword = UILabel()
+    private let loginTextField = UITextField()
+    private let passwordTextField = UITextField()
+    private let imageView = UIImageView()
+    private let dividerOne = UIView()
+    private let dividerTwo = UIView()
     
     
     var navController = UINavigationController()

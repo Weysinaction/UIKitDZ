@@ -8,21 +8,23 @@
 
 import UIKit
 
-class IngredientsViewController: UIViewController {
+final class IngredientsViewController: UIViewController {
 
+    //MARK: private properties
+    private let imageViewPizza = UIImageView()
+    private let labelHeader = UILabel()
+    private let labelFirstIng = UILabel()
+    private let labelSecondIng = UILabel()
+    private let labelThirdIng = UILabel()
+    private let labelFourthIng = UILabel()
+    private let switchOne = UISwitch()
+    private let switchTwo = UISwitch()
+    private let switchThree = UISwitch()
+    private let switchFour = UISwitch()
+    private let buttonAdd = UIButton()
+    private var pizzaViewController = PizzaViewController()
+    
     //MARK: public properties
-    let imageViewPizza = UIImageView()
-    let labelHeader = UILabel()
-    let labelFirstIng = UILabel()
-    let labelSecondIng = UILabel()
-    let labelThirdIng = UILabel()
-    let labelFourthIng = UILabel()
-    let switchOne = UISwitch()
-    let switchTwo = UISwitch()
-    let switchThree = UISwitch()
-    let switchFour = UISwitch()
-    let buttonAdd = UIButton()
-    var pizzaViewController = PizzaViewController()
     var pizzaImage = UIImage()
     var ingredientsArray: [String] = []
     

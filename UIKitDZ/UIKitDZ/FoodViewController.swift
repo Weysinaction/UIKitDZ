@@ -8,12 +8,12 @@
 
 import UIKit
 
-class FoodViewController: UIViewController {
+final class FoodViewController: UIViewController {
 
-    //MARK: public properties
-    let imageViewPizza = UIImageView()
-    let imageViewSushi = UIImageView()
-    var tapGesture = UITapGestureRecognizer()
+    //MARK: private properties
+    private let imageViewPizza = UIImageView()
+    private let imageViewSushi = UIImageView()
+    private var tapGesture = UITapGestureRecognizer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +23,6 @@ class FoodViewController: UIViewController {
         self.tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
         
         initImageViews()
-        initNavigationBar()
     }
     
     //MARK: Methods
@@ -41,17 +40,7 @@ class FoodViewController: UIViewController {
         
     }
     
-    func initNavigationBar() {
-        self.navigationController?.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "left-arrow"), style: .plain, target: self, action: #selector(barButtonBack(sender:)))
-        
-    }
-    
     //MARK: Selectors
-    
-    @objc func barButtonBack(sender: UIBarButtonItem) {
-            
-    }
-        
     @objc func imageTapped() {
         let viewController = PizzaViewController()
         self.navigationController?.pushViewController(viewController, animated: true)

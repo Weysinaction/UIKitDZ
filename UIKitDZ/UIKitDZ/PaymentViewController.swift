@@ -8,16 +8,18 @@
 
 import UIKit
 
-class PaymentViewController: UIViewController {
+final class PaymentViewController: UIViewController {
 
+    //MARK: private properties
+    private let labelOrder = UILabel()
+    private let labelOrderDetail = UILabel()
+    private let labelCard = UILabel()
+    private let labelCash = UILabel()
+    private let buttonPay = UIButton()
+    private let switchCard = UISwitch()
+    private let switchCash = UISwitch()
+    
     //MARK: public properties
-    let labelOrder = UILabel()
-    let labelOrderDetail = UILabel()
-    let labelCard = UILabel()
-    let labelCash = UILabel()
-    let buttonPay = UIButton()
-    let switchCard = UISwitch()
-    let switchCash = UISwitch()
     var ingredientsArray: [String] = []
 
     
