@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E0A8A05A2691F19E002A315E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A0592691F19E002A315E /* SecondViewController.swift */; };
+		E0A8A05C2691F1A6002A315E /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A05B2691F1A6002A315E /* ThirdViewController.swift */; };
+		E0A8A05E2691F1AF002A315E /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8A05D2691F1AF002A315E /* FourthViewController.swift */; };
+		E0A8A0612691F7D0002A315E /* FirstVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0A8A05F2691F7D0002A315E /* FirstVC.storyboard */; };
+		E0A8A0632691F7E6002A315E /* SecondVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0A8A0622691F7E6002A315E /* SecondVC.storyboard */; };
+		E0A8A0662691F7FC002A315E /* Third.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0A8A0642691F7FC002A315E /* Third.storyboard */; };
+		E0A8A0682691F80F002A315E /* Fourth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0A8A0672691F80F002A315E /* Fourth.storyboard */; };
 		E0B8F7312681CBBC000237D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B8F7302681CBBC000237D3 /* AppDelegate.swift */; };
 		E0B8F7332681CBBC000237D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B8F7322681CBBC000237D3 /* SceneDelegate.swift */; };
 		E0B8F7352681CBBC000237D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B8F7342681CBBC000237D3 /* ViewController.swift */; };
@@ -16,6 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E0A8A0592691F19E002A315E /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		E0A8A05B2691F1A6002A315E /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		E0A8A05D2691F1AF002A315E /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		E0A8A0602691F7D0002A315E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = UIKitDZ/Base.lproj/FirstVC.storyboard; sourceTree = "<group>"; };
+		E0A8A0622691F7E6002A315E /* SecondVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SecondVC.storyboard; sourceTree = "<group>"; };
+		E0A8A0652691F7FC002A315E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = UIKitDZ/Base.lproj/Third.storyboard; sourceTree = "<group>"; };
+		E0A8A0672691F80F002A315E /* Fourth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Fourth.storyboard; sourceTree = "<group>"; };
 		E0B8F72D2681CBBC000237D3 /* UIKitDZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitDZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0B8F7302681CBBC000237D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0B8F7322681CBBC000237D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,7 +73,14 @@
 				E0B8F7302681CBBC000237D3 /* AppDelegate.swift */,
 				E0B8F7322681CBBC000237D3 /* SceneDelegate.swift */,
 				E0B8F7342681CBBC000237D3 /* ViewController.swift */,
+				E0A8A0592691F19E002A315E /* SecondViewController.swift */,
+				E0A8A05B2691F1A6002A315E /* ThirdViewController.swift */,
+				E0A8A05D2691F1AF002A315E /* FourthViewController.swift */,
 				E0B8F7362681CBBC000237D3 /* Main.storyboard */,
+				E0A8A05F2691F7D0002A315E /* FirstVC.storyboard */,
+				E0A8A0622691F7E6002A315E /* SecondVC.storyboard */,
+				E0A8A0642691F7FC002A315E /* Third.storyboard */,
+				E0A8A0672691F80F002A315E /* Fourth.storyboard */,
 				E0B8F7392681CBBE000237D3 /* Assets.xcassets */,
 				E0B8F73B2681CBBE000237D3 /* LaunchScreen.storyboard */,
 				E0B8F73E2681CBBE000237D3 /* Info.plist */,
@@ -126,7 +147,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0B8F73D2681CBBE000237D3 /* LaunchScreen.storyboard in Resources */,
+				E0A8A0632691F7E6002A315E /* SecondVC.storyboard in Resources */,
 				E0B8F73A2681CBBE000237D3 /* Assets.xcassets in Resources */,
+				E0A8A0682691F80F002A315E /* Fourth.storyboard in Resources */,
+				E0A8A0612691F7D0002A315E /* FirstVC.storyboard in Resources */,
+				E0A8A0662691F7FC002A315E /* Third.storyboard in Resources */,
 				E0B8F7382681CBBC000237D3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,7 +163,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0A8A05E2691F1AF002A315E /* FourthViewController.swift in Sources */,
+				E0A8A05A2691F19E002A315E /* SecondViewController.swift in Sources */,
 				E0B8F7352681CBBC000237D3 /* ViewController.swift in Sources */,
+				E0A8A05C2691F1A6002A315E /* ThirdViewController.swift in Sources */,
 				E0B8F7312681CBBC000237D3 /* AppDelegate.swift in Sources */,
 				E0B8F7332681CBBC000237D3 /* SceneDelegate.swift in Sources */,
 			);
@@ -147,6 +175,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		E0A8A05F2691F7D0002A315E /* FirstVC.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E0A8A0602691F7D0002A315E /* Base */,
+			);
+			name = FirstVC.storyboard;
+			sourceTree = "<group>";
+		};
+		E0A8A0642691F7FC002A315E /* Third.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E0A8A0652691F7FC002A315E /* Base */,
+			);
+			name = Third.storyboard;
+			sourceTree = "<group>";
+		};
 		E0B8F7362681CBBC000237D3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -1,19 +1,19 @@
 //
-//  ViewController.swift
+//  ThirdViewController.swift
 //  UIKitDZ
 //
-//  Created by Владислав Лазарев on 22.06.2021.
+//  Created by Владислав Лазарев on 04.07.2021.
 //  Copyright © 2021 Владислав Лазарев. All rights reserved.
 //
 
 import UIKit
 
-final class ViewController: UIViewController {
+final class ThirdViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
 
+    }
+    
 
 }
-
