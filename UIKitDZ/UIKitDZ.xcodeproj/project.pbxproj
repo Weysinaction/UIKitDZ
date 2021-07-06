@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E02FEEA72693AE2500E3C2E4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02FEEA62693AE2500E3C2E4 /* SecondViewController.swift */; };
 		E0B8F7312681CBBC000237D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B8F7302681CBBC000237D3 /* AppDelegate.swift */; };
 		E0B8F7332681CBBC000237D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B8F7322681CBBC000237D3 /* SceneDelegate.swift */; };
 		E0B8F7352681CBBC000237D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B8F7342681CBBC000237D3 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E02FEEA62693AE2500E3C2E4 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		E0B8F72D2681CBBC000237D3 /* UIKitDZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitDZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0B8F7302681CBBC000237D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0B8F7322681CBBC000237D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				E0B8F7302681CBBC000237D3 /* AppDelegate.swift */,
 				E0B8F7322681CBBC000237D3 /* SceneDelegate.swift */,
+				E02FEEA62693AE2500E3C2E4 /* SecondViewController.swift */,
 				E0B8F7342681CBBC000237D3 /* ViewController.swift */,
 				E0B8F7362681CBBC000237D3 /* Main.storyboard */,
 				E0B8F7392681CBBE000237D3 /* Assets.xcassets */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E02FEEA72693AE2500E3C2E4 /* SecondViewController.swift in Sources */,
 				E0B8F7352681CBBC000237D3 /* ViewController.swift in Sources */,
 				E0B8F7312681CBBC000237D3 /* AppDelegate.swift in Sources */,
 				E0B8F7332681CBBC000237D3 /* SceneDelegate.swift in Sources */,
