@@ -11,8 +11,8 @@ import UIKit
 final class SecondViewController: UIViewController {
 
     //MARK: private properties
-    let imageView = UIImageView()
-    let label = UILabel()
+    private let imageView = UIImageView()
+    private let label = UILabel()
     
     //MARK: ViewController's methods
     override func viewDidLoad() {
@@ -23,9 +23,9 @@ final class SecondViewController: UIViewController {
         configureLabel()
     }
     
-    //MARK: public methods
+    //MARK: private methods
     //Set settings to main view
-    func configureLabel() {
+    private func configureLabel() {
         self.label.frame = CGRect(x: 50, y: 150, width: 300, height: 100)
         self.label.textAlignment = .center
         self.label.text = "Гляньте-ка лучше на котика))"
@@ -36,14 +36,14 @@ final class SecondViewController: UIViewController {
     }
     
     //Configure main view
-    func configureSelfView() {
+    private func configureSelfView() {
         self.view.backgroundColor = .white
         self.title = "SecondVC"
         configureTabBarItem()
     }
     
     //Configure image view
-    func configureImageView() {
+    private func configureImageView() {
         imageView.frame = CGRect(x: 0, y: 0, width: 350, height: 350)
         imageView.center = self.view.center
         imageView.image = UIImage(named: "iu-22")
@@ -53,7 +53,7 @@ final class SecondViewController: UIViewController {
     }
     
     //add tab bar item
-    func configureTabBarItem() {
+    private func configureTabBarItem() {
         var tabBarItem = UITabBarItem()
         tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 2)
         self.tabBarItem = tabBarItem

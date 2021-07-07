@@ -19,8 +19,8 @@ final class ViewController: UIViewController {
     private let slider = UISlider()
     private let colorsArray = ["Black", "Orange", "Blue", "Red"]
     private let rowsArray = ["1", "2", "3", "4", "5"]
-    var colorsGesture = UITapGestureRecognizer()
-    var rowsGesture = UITapGestureRecognizer()
+    private var colorsGesture = UITapGestureRecognizer()
+    private var rowsGesture = UITapGestureRecognizer()
     
     
     //MARK: ViewController's methods
@@ -36,9 +36,9 @@ final class ViewController: UIViewController {
         
     }
     
-    //MARK: public methods
+    //MARK: private methods
     //Create label
-    func configureLabel() {
+    private func configureLabel() {
         self.labelMain.frame = CGRect(x: 50, y: 100, width: 300, height: 300)
         self.labelMain.textAlignment = .center
         self.labelMain.text = "Some text"
@@ -64,7 +64,7 @@ final class ViewController: UIViewController {
     }
     
     //create UISlider
-    func configureSlider() {
+    private func configureSlider() {
         self.slider.frame = CGRect(x: 75, y: 705, width: 250, height: 35)
         self.slider.addTarget(self, action: #selector(sliderChanged(sender:)), for: .valueChanged)
         self.slider.minimumValue = 1
@@ -74,43 +74,39 @@ final class ViewController: UIViewController {
     }
     
     //Create picker views and subscribe them on delegate
-    func configurePickerViews() {
+    private func configurePickerViews() {
         self.pickerViewColor.frame = CGRect(x: 30, y: 500, width: 150, height: 150)
         self.pickerViewColor.dataSource = self
         self.pickerViewColor.delegate = self
-        colorsGesture = UITapGestureRecognizer(target: self, action: #selector(colorChanged(sender:)))
-        self.pickerViewColor.addGestureRecognizer(colorsGesture)
         self.view.addSubview(pickerViewColor)
         
         self.pickerViewRows.frame = CGRect(x: 240, y: 500, width: 150, height: 150)
         self.pickerViewRows.dataSource = self
         self.pickerViewRows.delegate = self
         self.pickerViewRows.isUserInteractionEnabled = true
-        self.rowsGesture = UITapGestureRecognizer(target: self, action: #selector(rowsChanged(sender:)))
-        self.pickerViewColor.addGestureRecognizer(rowsGesture)
         self.view.addSubview(pickerViewRows)
     }
     
     //Set settings to main view
-    func configureSelfView() {
+    private func configureSelfView() {
         self.view.backgroundColor = .white
         configureTabBarItem()
     }
     
     //Add tab bar item
-    func configureTabBarItem() {
+    private func configureTabBarItem() {
         var tabBarItem = UITabBarItem()
         tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
         self.tabBarItem = tabBarItem
     }
     //Add button "+" to ToolBar
-    func configureRightBarButtonItem() {
+    private func configureRightBarButtonItem() {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(barButtonTapped(sender:)))
         self.navigationItem.rightBarButtonItem?.tintColor = .systemOrange
     }
     
     //Call alert to add a text
-    func callAlert() {
+    private func callAlert() {
         let alert = UIAlertController(title: "Добавить", message: "Введите новый текст.", preferredStyle: .alert)
         alert.addTextField(configurationHandler: nil)
         let action = UIAlertAction(title: "OK", style: .default, handler: { action in
@@ -123,7 +119,7 @@ final class ViewController: UIViewController {
     }
     
     //Set color by element of colors array
-    func setColor(colorString: String) {
+    private func setColor(colorString: String) {
         switch colorString {
         case "Black":
             labelMain.textColor = .black
@@ -142,15 +138,6 @@ final class ViewController: UIViewController {
     //add action to button in toolbar
     @objc func barButtonTapped(sender: UIBarButtonItem) {
         callAlert()
-    }
-    
-    @objc func colorChanged(sender: UITapGestureRecognizer) {
-        print("color changed")
-    }
-    
-    @objc func rowsChanged(sender: UITapGestureRecognizer) {
-        print("rows changed")
-        
     }
     
     @objc func sliderChanged(sender: UISlider) {
