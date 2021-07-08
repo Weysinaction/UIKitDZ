@@ -17,8 +17,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         createTextField()
         myTextField.delegate = self
+        NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: nil) { (nc) in
+            self.view.frame.origin.y = -200
+        }
+        NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: nil) { (nc) in
+            self.view.frame.origin.y = 0.0
+        }
         
-        NotificationCenter.default.addObserver(forName: NSNotification.Name., object: <#T##Any?#>, queue: <#T##OperationQueue?#>, using: <#T##(Notification) -> Void#>)
+            
     }
 
     //MARK: CreateUI
@@ -33,13 +39,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
         myTextField.center = self.view.center
         self.view.addSubview(self.myTextField)
     }
-    
+
+    //MARK: selectors
+    func keyboardWillShow(sender: NSNotification) {
+        self.view.frame.origin.y -= 150
+    }
+    func keyboardWillHide(sender: NSNotification) {
+        self.view.frame.origin.y += 150
+    }
     //Mark: -UITextFieldDelegate
-    
-    
-    //MARK: Notification
-    @objc func textFieldTextDidChange(ncParam: NSNotification) {
-        print("UITextFieldTextDidChange = \(ncParam)")
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.myTextField.resignFirstResponder()
+        return true
     }
 }
 
