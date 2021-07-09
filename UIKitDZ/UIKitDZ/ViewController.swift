@@ -11,11 +11,11 @@ import UIKit
 final class ViewController: UIViewController {
 
     //MARK: IBOutlets
-    @IBOutlet var loginTextField: UITextField!
-    @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet private var loginTextField: UITextField!
+    @IBOutlet private var passwordTextField: UITextField!
     
     //MARK: private properties
-    let defaults = UserDefaults.standard
+    private let defaults = UserDefaults.standard
     
     //MARK: ViewCOntroller's methods
     override func viewDidLoad() {
@@ -51,7 +51,7 @@ final class ViewController: UIViewController {
     }
     
     //MARK: IBAction
-    @IBAction func entryTapped(_ sender: Any) {
+    @IBAction private func entryTapped(_ sender: Any) {
         if checkUser() {
             if let marksViewController = self.storyboard?.instantiateViewController(identifier: "MarksViewController") {
                 self.navigationController?.pushViewController(marksViewController, animated: true)
@@ -61,7 +61,7 @@ final class ViewController: UIViewController {
         }
     }
     
-    @IBAction func registrationTapped(_ sender: Any) {
+    @IBAction private func registrationTapped(_ sender: Any) {
         if let registrationViewController = self.storyboard?.instantiateViewController(identifier: "RegistrationViewController") {
             self.navigationController?.pushViewController(registrationViewController, animated: true)
         }

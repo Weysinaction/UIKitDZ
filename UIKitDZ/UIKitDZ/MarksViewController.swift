@@ -11,41 +11,35 @@ import UIKit
 final class MarksViewController: UIViewController {
 
     //MARK: IBOutlets
-    @IBOutlet var categorySegmentController: UISegmentedControl!
-    @IBOutlet var firstImage: UIImageView!
-    @IBOutlet var secondImage: UIImageView!
-    @IBOutlet var thirdImage: UIImageView!
-    @IBOutlet var firstLabel: UILabel!
-    @IBOutlet var secondLabel: UILabel!
-    @IBOutlet var thirdLabel: UILabel!
+    @IBOutlet private var categorySegmentController: UISegmentedControl!
+    @IBOutlet private var firstImage: UIImageView!
+    @IBOutlet private var secondImage: UIImageView!
+    @IBOutlet private var thirdImage: UIImageView!
+    @IBOutlet private var firstLabel: UILabel!
+    @IBOutlet private var secondLabel: UILabel!
+    @IBOutlet private var thirdLabel: UILabel!
     
     //MARK: private properties
-    var imagesArray: [UIImage?] = [UIImage(named: "mustang"), UIImage(named: "challenger"), UIImage(named: "charger"),
+    private let imagesCars: [UIImage?] = [UIImage(named: "mustang"), UIImage(named: "challenger"), UIImage(named: "charger"),
                                   UIImage(named: "sportCarOne"), UIImage(named: "sportCarTwo"), UIImage(named: "cportCarThree")]
-    var labelsArray = ["Ford Mustang", "Dodge Chalenger", "Dodge Charger",
+    private let labelsArray = ["Ford Mustang", "Dodge Chalenger", "Dodge Charger",
                        "Lamborghini Hurracan", "Koenigsegg", "Marussia"]
-    
-    //MARK: ViewController's methods
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
     
     //MARK: private methods
     private func loadImagesAndLabels(segmentIndex: Int) {
         switch segmentIndex {
         case 0:
-            firstImage.image = imagesArray[0]
-            secondImage.image = imagesArray[1]
-            thirdImage.image = imagesArray[2]
+            firstImage.image = imagesCars[0]
+            secondImage.image = imagesCars[1]
+            thirdImage.image = imagesCars[2]
             
             firstLabel.text = labelsArray[0]
             secondLabel.text = labelsArray[1]
             thirdLabel.text = labelsArray[2]
         case 1:
-            firstImage.image = imagesArray[3]
-            secondImage.image = imagesArray[4]
-            thirdImage.image = imagesArray[5]
+            firstImage.image = imagesCars[3]
+            secondImage.image = imagesCars[4]
+            thirdImage.image = imagesCars[5]
             
             firstLabel.text = labelsArray[3]
             secondLabel.text = labelsArray[4]
@@ -57,7 +51,7 @@ final class MarksViewController: UIViewController {
     }
 
     //MARK: IBAction
-    @IBAction func segmentChanged(_ sender: UISegmentedControl) {
+    @IBAction private func segmentChanged(_ sender: UISegmentedControl) {
         loadImagesAndLabels(segmentIndex: sender.selectedSegmentIndex)
     }
     

@@ -11,18 +11,18 @@ import UIKit
 final class RegistrationViewController: UIViewController {
 
     //MARK: IBOutlet
-    @IBOutlet var nameTextField: UITextField!
-    @IBOutlet var famTextField: UITextField!
-    @IBOutlet var emailTextField: UITextField!
-    @IBOutlet var numberTextField: UITextField!
-    @IBOutlet var passwordTextField: UITextField!
-    @IBOutlet var repeatPasswordTextField: UITextField!
-    @IBOutlet var manSwitch: UISwitch!
-    @IBOutlet var femaleSwitch: UISwitch!
+    @IBOutlet private var nameTextField: UITextField!
+    @IBOutlet private var famTextField: UITextField!
+    @IBOutlet private var emailTextField: UITextField!
+    @IBOutlet private var numberTextField: UITextField!
+    @IBOutlet private var passwordTextField: UITextField!
+    @IBOutlet private var repeatPasswordTextField: UITextField!
+    @IBOutlet private var manSwitch: UISwitch!
+    @IBOutlet private var femaleSwitch: UISwitch!
     
     //MARK: private properties
-    let defaults = UserDefaults.standard
-    var arrayOfUsers: [(login: String, password: String)] = []
+    private let defaults = UserDefaults.standard
+    private var arrayOfUsers: [(login: String, password: String)] = []
     
     //MARK: ViewControllers methods
     override func viewDidLoad() {
@@ -33,7 +33,6 @@ final class RegistrationViewController: UIViewController {
     
     //MARK: private methods
     
-    //Функция для настройки textFields
     private func setupTextFields() {
         nameTextField.delegate = self
         nameTextField.becomeFirstResponder()
@@ -44,7 +43,6 @@ final class RegistrationViewController: UIViewController {
         repeatPasswordTextField.delegate = self
     }
     
-    //функция для настройки notifications
     private func setupNotifications() {
         NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: nil) { _ in
             self.view.frame.origin.y = -100
@@ -55,7 +53,6 @@ final class RegistrationViewController: UIViewController {
         }
     }
     
-    //Функция для вывода алерта
     private func presentAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
@@ -64,46 +61,42 @@ final class RegistrationViewController: UIViewController {
     }
     
     //MARK: IBAction
-    @IBAction func registrationButtonTapped(_ sender: Any) {
+    @IBAction private func registrationButtonTapped(_ sender: Any) {
         //Проверяем все ли поля заполненны
-        guard (nameTextField.text != "" && famTextField.text != "" && emailTextField.text != "" && numberTextField.text != "" && passwordTextField.text != "" && repeatPasswordTextField.text != "")  else {
+        if ((nameTextField.text?.isEmpty) != nil),
+           ((famTextField.text?.isEmpty) != nil),
+           ((emailTextField.text?.isEmpty) != nil),
+           ((numberTextField.text?.isEmpty) != nil),
+           ((passwordTextField.text?.isEmpty) != nil),
+           ((repeatPasswordTextField.text?.isEmpty) != nil) {
             presentAlert(title: "Ошибка!", message: "Необходимо заполнить все поля")
-            return
-        }
-        
-        //Проверяем совпадают ли пароли
-        if (passwordTextField.text == repeatPasswordTextField.text) {
-            //Проверяем зарегистрирован ли пользователь
-            //Берем запись из юзер дефолтс, если массив по введённому Логину пустой, значит пользователь не зарегистрирован
-            let userInfo = defaults.array(forKey: nameTextField.text!) as? [String] ?? [String]()
-            if userInfo.count == 0 {
-                let userArray = [nameTextField.text!, passwordTextField.text!]
-                defaults.set(userArray, forKey: nameTextField.text!)
-                self.navigationController?.popViewController(animated: true)
+        } else {
+            //Проверяем совпадают ли пароли
+            if passwordTextField.text == repeatPasswordTextField.text {
+                //Проверяем зарегистрирован ли пользователь
+                //Берем запись из юзер дефолтс, если массив по введённому Логину пустой, значит пользователь не зарегистрирован
+                let userInfo = defaults.array(forKey: nameTextField.text!) as? [String] ?? [String]()
+                if userInfo.count == 0 {
+                    let userArray = [nameTextField.text!, passwordTextField.text!]
+                    defaults.set(userArray, forKey: nameTextField.text!)
+                    self.navigationController?.popViewController(animated: true)
+                } else {
+                    presentAlert(title: "Ошибка!", message: "Пользователь с таким именем уже зарегистрирован")
+                }
+                
             } else {
-                presentAlert(title: "Ошибка!", message: "Пользователь с таким именем уже зарегистрирован")
+                presentAlert(title: "Ошибка!", message: "Пароли не совпадают")
             }
-            
-        } else {
-            presentAlert(title: "Ошибка!", message: "Пароли не совпадают")
-            
         }
     }
     
-    @IBAction func switchMale(_ sender: UISwitch) {
-        if manSwitch.isOn {
-            femaleSwitch.isOn = false
-        } else {
-            femaleSwitch.isOn = true
-        }
+    @IBAction private func switchMale(_ sender: UISwitch) {
+        
+        femaleSwitch.isOn = manSwitch.isOn ? false : true
     }
     
-    @IBAction func switchFemale(_ sender: UISwitch) {
-        if femaleSwitch.isOn {
-            manSwitch.isOn = false
-        } else {
-            manSwitch.isOn = true
-        }
+    @IBAction private func switchFemale(_ sender: UISwitch) {
+        manSwitch.isOn = femaleSwitch.isOn ? false : true
     }
 }
 
