@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E02FEEA9269738AD00E3C2E4 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02FEEA8269738AD00E3C2E4 /* RegistrationViewController.swift */; };
+		E02FEEAB269738C100E3C2E4 /* MarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02FEEAA269738C100E3C2E4 /* MarksViewController.swift */; };
 		E0B8F7312681CBBC000237D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B8F7302681CBBC000237D3 /* AppDelegate.swift */; };
 		E0B8F7332681CBBC000237D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B8F7322681CBBC000237D3 /* SceneDelegate.swift */; };
 		E0B8F7352681CBBC000237D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B8F7342681CBBC000237D3 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E02FEEA8269738AD00E3C2E4 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		E02FEEAA269738C100E3C2E4 /* MarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarksViewController.swift; sourceTree = "<group>"; };
 		E0B8F72D2681CBBC000237D3 /* UIKitDZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitDZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0B8F7302681CBBC000237D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0B8F7322681CBBC000237D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 				E0B8F7302681CBBC000237D3 /* AppDelegate.swift */,
 				E0B8F7322681CBBC000237D3 /* SceneDelegate.swift */,
 				E0B8F7342681CBBC000237D3 /* ViewController.swift */,
+				E02FEEAA269738C100E3C2E4 /* MarksViewController.swift */,
+				E02FEEA8269738AD00E3C2E4 /* RegistrationViewController.swift */,
 				E0B8F7362681CBBC000237D3 /* Main.storyboard */,
 				E0B8F7392681CBBE000237D3 /* Assets.xcassets */,
 				E0B8F73B2681CBBE000237D3 /* LaunchScreen.storyboard */,
@@ -140,6 +146,8 @@
 			files = (
 				E0B8F7352681CBBC000237D3 /* ViewController.swift in Sources */,
 				E0B8F7312681CBBC000237D3 /* AppDelegate.swift in Sources */,
+				E02FEEAB269738C100E3C2E4 /* MarksViewController.swift in Sources */,
+				E02FEEA9269738AD00E3C2E4 /* RegistrationViewController.swift in Sources */,
 				E0B8F7332681CBBC000237D3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
