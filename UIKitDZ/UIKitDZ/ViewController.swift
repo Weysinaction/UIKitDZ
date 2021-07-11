@@ -9,10 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    var myImageView = UIImageView()
+    let macBookImage = UIImage(named: "macbook")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        myImageView = UIImageView(frame: self.view.bounds)
+        myImageView.contentMode = .scaleAspectFit
+        myImageView.image = macBookImage
+        myImageView.center = self.view.center
+        self.view.addSubview(myImageView)
     }
 
 
