@@ -10,34 +10,36 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let viewRed: UIView = {
+    //MARK: private properties
+    private let viewRed: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .red
         return view
     }()
     
-    let viewYellow: UIView = {
+    private let viewYellow: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .yellow
         return view
     }()
     
-    let viewGreen: UIView = {
+    private let viewGreen: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .green
         return view
     }()
     
-    let viewBlack: UIView = {
+    private let viewBlack: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .black
         return view
     }()
     
+    //MARK: View Controller's methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,21 +55,22 @@ class ViewController: UIViewController {
         
     }
 
-    func createRedViewConstraint() {
+    //private methods
+    private func createRedViewConstraint() {
         viewRed.leftAnchor.constraint(equalTo: viewBlack.leftAnchor, constant: 10).isActive = true
         viewRed.rightAnchor.constraint(equalTo: viewBlack.rightAnchor, constant: -10).isActive = true
         viewRed.topAnchor.constraint(equalTo: viewBlack.topAnchor, constant: 10).isActive = true
-        viewRed.heightAnchor.constraint(equalTo: viewBlack.heightAnchor, multiplier: 0.3).isActive = true
+        viewRed.heightAnchor.constraint(equalTo: viewYellow.heightAnchor, multiplier: 1).isActive = true
     }
     
-    func createYellowViewConstraint() {
+    private func createYellowViewConstraint() {
         viewYellow.leftAnchor.constraint(equalTo: viewBlack.leftAnchor, constant: 10).isActive = true
         viewYellow.rightAnchor.constraint(equalTo: viewBlack.rightAnchor, constant: -10).isActive = true
         viewYellow.topAnchor.constraint(equalTo: viewRed.bottomAnchor, constant: 8).isActive = true
-        viewYellow.heightAnchor.constraint(equalTo: viewBlack.heightAnchor, multiplier: 0.3).isActive = true
+        viewYellow.heightAnchor.constraint(equalTo: viewGreen.heightAnchor, multiplier: 1).isActive = true
     }
     
-    func createGreenViewConstraint() {
+    private func createGreenViewConstraint() {
         viewGreen.leftAnchor.constraint(equalTo: viewBlack.leftAnchor, constant: 10).isActive = true
         viewGreen.rightAnchor.constraint(equalTo: viewBlack.rightAnchor, constant: -10).isActive = true
         viewGreen.topAnchor.constraint(equalTo: viewYellow.bottomAnchor, constant: 8).isActive = true
@@ -75,7 +78,7 @@ class ViewController: UIViewController {
 
     }
     
-    func createBlackViewConstraint() {
+    private func createBlackViewConstraint() {
         viewBlack.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         viewBlack.widthAnchor.constraint(equalToConstant: 200).isActive = true
         viewBlack.topAnchor.constraint(equalTo: view.topAnchor, constant: 50).isActive = true
