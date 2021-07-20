@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AnchorsViewController: UIViewController {
+final class AnchorsViewController: UIViewController {
     private let viewRed: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -41,25 +41,32 @@ class AnchorsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.addSubview(viewBlack)
-        view.addSubview(viewRed)
-        view.addSubview(viewYellow)
-        view.addSubview(viewGreen)
-        
         setupViewController()
-        createRedViewConstraint()
-        createYellowViewConstraint()
-        createGreenViewConstraint()
-        createBlackViewConstraint()
     }
 
     //private methods
     private func setupViewController() {
         view.backgroundColor = .systemBackground
         self.title = "Anchors"
+        
+        addSubViews()
+        createConstraints()
         setupNavBar()
     }
     
+    private func addSubViews() {
+        view.addSubview(viewBlack)
+        view.addSubview(viewRed)
+        view.addSubview(viewYellow)
+        view.addSubview(viewGreen)
+    }
+    
+    private func createConstraints() {
+        createRedViewConstraint()
+        createYellowViewConstraint()
+        createGreenViewConstraint()
+        createBlackViewConstraint()
+    }
     private func setupNavBar() {
         let barButtonItem = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(forwardButtonTapped))
         barButtonItem.tintColor = .black
@@ -91,12 +98,12 @@ class AnchorsViewController: UIViewController {
     private func createBlackViewConstraint() {
         viewBlack.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         viewBlack.widthAnchor.constraint(equalToConstant: 200).isActive = true
-        viewBlack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50).isActive = true
+        viewBlack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10).isActive = true
         viewBlack.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -30).isActive = true
     }
     
     @objc private func forwardButtonTapped() {
-        let vc = AnchorsViewController()
+        let vc = NSLayoutConstaintsViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
 }

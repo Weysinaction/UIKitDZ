@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
     //MARK: private properties
     private let stackView = UIStackView()
@@ -44,20 +44,24 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.addSubview(stackView)
-        view.addSubview(viewRed)
-        view.addSubview(viewYellow)
-        view.addSubview(viewGreen)
-        
         setupViewController()
-        setupStackView()
     }
 
     //private methods
     private func setupViewController() {
         view.backgroundColor = .systemBackground
         self.title = "StackView"
+        
         setupNavBar()
+        addSubViews()
+        setupStackView()
+    }
+    
+    private func addSubViews() {
+        view.addSubview(stackView)
+        view.addSubview(viewRed)
+        view.addSubview(viewYellow)
+        view.addSubview(viewGreen)
     }
     
     private func setupNavBar() {
